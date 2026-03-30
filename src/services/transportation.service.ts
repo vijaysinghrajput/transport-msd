@@ -29,9 +29,26 @@ export const vehicleService = {
   },
 
   async create(vehicle: Record<string, any>) {
+    const insertData = {
+      vehicle_number: vehicle.vehicle_number,
+      vehicle_type: vehicle.vehicle_type || null,
+      vehicle_model: vehicle.vehicle_model || null,
+      capacity_kg: vehicle.capacity_kg || null,
+      capacity_cubic_meters: vehicle.capacity_cubic_meters || null,
+      driver_name: vehicle.driver_name || null,
+      driver_contact: vehicle.driver_contact || null,
+      driver_license_number: vehicle.driver_license_number || null,
+      owner_type: vehicle.owner_type || 'company',
+      vendor_name: vehicle.vendor_name || null,
+      vendor_contact: vehicle.vendor_contact || null,
+      is_active: vehicle.is_active ?? true,
+      notes: vehicle.notes || null,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+    }
     const { data, error } = await supabase
       .from('solar_transportation_vehicles')
-      .insert([{ ...vehicle, created_at: new Date().toISOString(), updated_at: new Date().toISOString() }])
+      .insert(insertData)
       .select()
       .single()
     if (error) throw error

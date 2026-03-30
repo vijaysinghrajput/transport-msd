@@ -61,7 +61,13 @@ export default function VehiclesPage() {
       }
       setShowForm(false)
       load()
-    } catch { message.error('Please fill required fields') }
+    } catch (err: any) {
+      if (err?.errorFields) {
+        message.error('Please fill required fields')
+      } else {
+        message.error(err?.message || 'Failed to save vehicle')
+      }
+    }
   }
 
   const handleDelete = async (id: string) => {
