@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "supabase": {
+      "type": "http",
+      "url": "https://mcp.supabase.com/mcp",
+      "env": {
+        "SUPABASE_PROJECT_REF": "skprvyuhxnlwyhjhukpr",
+        "SUPABASE_ACCESS_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNrcHJ2eXVoeG5sd3loamh1a3ByIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MTQ3MjYxMCwiZXhwIjoyMDc3MDQ4NjEwfQ._Pg3adySv6UYNi42a0_evc0HGVeMdN5jZWWi1RE4JPo"
+      },
+      "headers": {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNrcHJ2eXVoeG5sd3loamh1a3ByIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MTQ3MjYxMCwiZXhwIjoyMDc3MDQ4NjEwfQ._Pg3adySv6UYNi42a0_evc0HGVeMdN5jZWWi1RE4JPo",
+        "Content-Type": "application/json"
+      }
+    }
+  }
+}
